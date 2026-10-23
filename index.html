@@ -1,78 +1,201 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Purradise – a cozy home for cat lovers</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-<link href="src/css/style.css" rel="stylesheet"></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Purradise — A Sanctuary for Cat Lovers</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link href="src/css/style.css" rel="stylesheet">
+</head>
 <body>
-<nav class="navbar navbar-expand-md sticky-top px-3">
- <a class="navbar-brand brand" href="#top">🐾 Purradise</a>
- <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nv" aria-label="Menu"><span class="navbar-toggler-icon"></span></button>
- <div class="collapse navbar-collapse justify-content-end" id="nv"><ul class="navbar-nav gap-1 align-items-md-center">
-  <li><a class="nav-link" href="#play">Play</a></li><li><a class="nav-link" href="#gallery">Gallery</a></li><li><a class="nav-link" href="#facts">Facts</a></li><li><a class="nav-link" href="#breeds">Breeds</a></li><li><a class="nav-link" href="#quiz">Quiz</a></li><li><a class="nav-link" href="#care">Care</a></li>
-  <li><button id="mode" class="btn btn-sm pill" aria-label="Toggle dark mode">🌙</button></li></ul></div>
-</nav>
 
-<header id="top" class="hero-wrapper">
- <div class="hero container-fluid">
-  <div class="row align-items-center g-0 px-md-5">
-   <div class="col-md-6 py-5 px-4 position-relative z-2">
-    <h1 class="display-1 fw-bold">Purradise</h1>
-    <p class="lead">A cozy little corner of the internet for cat photos, fun facts, breeds and care tips.</p>
-    <a href="#play" class="btn btn-cute btn-lg">Pet the kitten</a>
-   </div>
-   <div class="col-md-6 text-center position-relative">
-    <div class="blob"></div>
-    <img id="kit" src="assets/kitten.png" class="hero-cat" alt="Gray tabby kitten. Click to pet it." tabindex="0">
-   </div>
+  <!-- Top Navigation -->
+  <nav class="navbar navbar-expand-md sticky-top px-4">
+    <div class="container-fluid max-w-site">
+      <a class="navbar-brand brand" href="#top">
+        <span class="brand-paw">🐾</span> Purradise
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nv" aria-controls="nv" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="nv">
+        <ul class="navbar-nav gap-2 align-items-md-center">
+          <li class="nav-item"><a class="nav-link" href="#play">Play</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#facts">Facts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#breeds">Breeds</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quiz">Quiz</a></li>
+          <li class="nav-item"><a class="nav-link" href="#care">Care</a></li>
+          <li class="nav-item ms-md-2">
+            <button id="mode" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with 3D Scroll Transformation -->
+  <div class="hero-viewport" id="top">
+    <header class="hero-container">
+      <div class="hero-card">
+        <div class="row align-items-center h-100 g-4">
+          <div class="col-lg-6 hero-text-col">
+            <span class="hero-eyebrow">Welcome to Purradise</span>
+            <h1 class="display-1 fw-bold hero-title">Where cats rule the world</h1>
+            <p class="lead hero-sub">A curated cozy corner for cat photos, interactive petting, breed discovery, and care essentials.</p>
+            <div class="d-flex align-items-center gap-3 mt-4">
+              <a href="#play" class="btn btn-cute btn-lg">Pet the Kitten</a>
+              <a href="#breeds" class="btn btn-outline-cute btn-lg">Explore Breeds</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center position-relative hero-media-col">
+            <div class="hero-stage">
+              <div class="hero-stage-bg"></div>
+              <img id="kit" src="assets/kitten.png" class="hero-cat" alt="Gray tabby kitten. Click or focus to pet." tabindex="0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
   </div>
- </div>
-</header>
 
-<section id="play" class="container text-center">
- <h2>Say hi to the kitten</h2><p class="sub">Click the kitten in the hero, or use the buttons below. Every pet makes it purr.</p>
- <div class="d-flex justify-content-center gap-2 flex-wrap mb-3">
-  <button class="btn btn-cute" data-act="pet">💗 Pet</button><button class="btn btn-cute" data-act="treat">🐟 Treat</button><button class="btn btn-cute" data-act="play">🧶 Play</button><button class="btn btn-cute" data-act="nap">😴 Nap</button>
- </div>
- <div class="mood mx-auto"><div class="d-flex justify-content-between"><b id="moodtxt">Calm and curious</b><span>Purrs: <b id="purrs">0</b></span></div>
- <div class="progress" role="progressbar" aria-label="Happiness"><div id="bar" class="progress-bar" style="width:40%"></div></div></div>
-</section>
+  <!-- Interactive Play Area -->
+  <section id="play" class="section-padding">
+    <div class="container max-w-site">
+      <div class="section-header text-center mb-5">
+        <h2>Say Hi to the Kitten</h2>
+        <p class="sub">Click the kitten above, or choose an action below to earn purrs and boost happiness.</p>
+      </div>
 
-<section id="gallery" class="container">
- <h2>Cat gallery</h2><p class="sub">Tap a card to open it. Swap in your own photos and clips in <code>script.js</code>.</p>
- <div class="text-center mb-4" id="filters">
-  <button class="btn pill active" data-f="all">All</button><button class="btn pill" data-f="photo">Photos</button><button class="btn pill" data-f="video">Videos</button></div>
- <div class="row g-3" id="gal"></div>
-</section>
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+          <div class="interaction-card">
+            <div class="d-flex justify-content-center gap-2 flex-wrap mb-4">
+              <button class="btn btn-cute act-btn" data-act="pet">💗 Pet</button>
+              <button class="btn btn-cute act-btn" data-act="treat">🐟 Treat</button>
+              <button class="btn btn-cute act-btn" data-act="play">🧶 Play</button>
+              <button class="btn btn-cute act-btn" data-act="nap">😴 Nap</button>
+            </div>
+            
+            <div class="mood-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="mood-label">Current Mood</span>
+                <b id="moodtxt" class="mood-status">Calm and curious</b>
+              </div>
+              <div class="progress custom-progress" role="progressbar" aria-label="Kitten Happiness Level">
+                <div id="bar" class="progress-bar custom-bar" style="width:40%"></div>
+              </div>
+              <div class="text-end mt-2">
+                <small class="purr-counter">Total Purrs: <b id="purrs">0</b></small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="facts" class="band-butter"><div class="container text-center">
- <h2>Fun cat facts</h2><p class="sub">Flip a card, or ask for a surprise fact from the Python server.</p>
- <div class="row g-3" id="fg"></div>
- <button id="rand" class="btn btn-cute mt-4">🎲 Surprise me</button>
- <p id="randtxt" class="mt-3 fs-5" aria-live="polite"></p>
-</div></section>
+  <!-- Gallery Section -->
+  <section id="gallery" class="section-padding section-alt">
+    <div class="container max-w-site">
+      <div class="section-header text-center mb-4">
+        <h2>Cat Gallery</h2>
+        <p class="sub">Discover photos and video highlights of feline moments.</p>
+      </div>
+      
+      <div class="d-flex justify-content-center gap-2 mb-5" id="filters">
+        <button class="filter-btn active" data-f="all">All Media</button>
+        <button class="filter-btn" data-f="photo">Photos</button>
+        <button class="filter-btn" data-f="video">Videos</button>
+      </div>
 
-<section id="breeds" class="container">
- <h2>Meet the breeds</h2><p class="sub">Tap a breed for a closer look.</p>
- <div class="row g-4" id="bg"></div>
-</section>
+      <div class="row g-4" id="gal"></div>
+    </div>
+  </section>
 
-<section id="quiz" class="band-lilac"><div class="container text-center">
- <h2>Which cat are you?</h2><p class="sub">Three questions, one perfect match.</p>
- <div class="quizbox mx-auto" id="qbox"></div>
-</div></section>
+  <!-- Facts Band -->
+  <section id="facts" class="section-padding band-accent">
+    <div class="container max-w-site text-center">
+      <div class="section-header mb-5">
+        <h2>Fun Feline Facts</h2>
+        <p class="sub">Flip a card to learn something new, or query our Python API server for a random fact.</p>
+      </div>
 
-<section id="care" class="container">
- <h2>Care tips</h2><p class="sub">The basics for a happy, healthy, purring friend.</p>
- <div class="accordion mx-auto" id="acc" style="max-width:760px"></div>
-</section>
+      <div class="row g-4 justify-content-center" id="fg"></div>
+      
+      <div class="mt-5">
+        <button id="rand" class="btn btn-cute btn-lg">🎲 Fetch API Fact</button>
+        <p id="randtxt" class="fact-output mt-3 fs-5" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
 
-<footer class="text-center py-5"><div class="brand fs-3">🐾 Purradise</div>Made with purrs and pastel paws.</footer>
+  <!-- Breeds Section -->
+  <section id="breeds" class="section-padding">
+    <div class="container max-w-site">
+      <div class="section-header text-center mb-5">
+        <h2>Meet the Breeds</h2>
+        <p class="sub">Explore distinct cat personalities and characteristics.</p>
+      </div>
 
-<div class="modal fade" id="m" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content text-center p-4">
- <div id="mv" class="mb-2"></div><h3 id="mt"></h3><p id="mp" class="mb-3"></p>
- <button class="btn btn-cute mx-auto" data-bs-dismiss="modal">Aww, close</button></div></div></div>
+      <div class="row g-4" id="bg"></div>
+    </div>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="src/js/script.js"></script>
-</body></html>
+  <!-- Quiz Section -->
+  <section id="quiz" class="section-padding band-soft">
+    <div class="container max-w-site text-center">
+      <div class="section-header mb-4">
+        <h2>Which Cat Are You?</h2>
+        <p class="sub">Answer 3 simple questions to discover your feline alter ego.</p>
+      </div>
+
+      <div class="quiz-card mx-auto" id="qbox"></div>
+    </div>
+  </section>
+
+  <!-- Care Tips Section -->
+  <section id="care" class="section-padding">
+    <div class="container max-w-site">
+      <div class="section-header text-center mb-5">
+        <h2>Essential Care Tips</h2>
+        <p class="sub">Fundamental guidelines for keeping your companion healthy and happy.</p>
+      </div>
+
+      <div class="accordion custom-accordion mx-auto" id="acc"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer-custom py-5 text-center">
+    <div class="container max-w-site">
+      <div class="brand fs-3 mb-2">🐾 Purradise</div>
+      <p class="text-muted mb-0">Crafted with care for feline enthusiasts everywhere.</p>
+    </div>
+  </footer>
+
+  <!-- Reusable Modal -->
+  <div class="modal fade" id="m" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content custom-modal p-4 text-center">
+        <div id="mv" class="modal-media mb-3"></div>
+        <h3 id="mt" class="modal-title mb-2"></h3>
+        <p id="mp" class="modal-body-text mb-4"></p>
+        <button class="btn btn-cute mx-auto" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/js/script.js"></script>
+</body>
+</html>
